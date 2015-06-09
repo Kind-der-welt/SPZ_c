@@ -18,7 +18,7 @@ namespace Course_proj
 
         int totalHits = 0;
 
-        public int getCPUCounter()
+        public Int32 getCPUCounter()
         {
 
             PerformanceCounter cpuCounter = new PerformanceCounter();
@@ -27,12 +27,12 @@ namespace Course_proj
             cpuCounter.InstanceName = "_Total";
 
             // всегда начинается с 0
-            dynamic firstValue = cpuCounter.NextValue();
+            var firstValue = cpuCounter.NextValue();
             System.Threading.Thread.Sleep(1000);
             // now matches task manager reading
-            dynamic secondValue = cpuCounter.NextValue();
+            var secondValue = cpuCounter.NextValue();
 
-            return secondValue;
+            return Convert.ToInt32( secondValue );
 
         }
 
@@ -54,11 +54,24 @@ namespace Course_proj
                 totalHits = 0;
             }
             label1.Text = cpuPercent + " % CPU";
-            label2.Text = totalHits + " seconds over 20% usage";        }
+            label2.Text = totalHits + " seconds over 20% usage";
+
+            var temperature = new TemperatureCheck();
+
+            var temp = TemperatureCheck.Temperatures;
+
+            if( temp.Count != 0 )
+                label3.Text = temp[ 0 ].CurrentValue.ToString();
+
+        }
 
         public Form1()
         {
             InitializeComponent();
+
+            var timer = new Timer();
+            timer.Tick += Timer1_Tick;
+            timer.Start();
 
         }
 
