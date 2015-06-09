@@ -20,16 +20,20 @@ namespace Course_proj
             {
                 List<TemperatureCheck> result = new List<TemperatureCheck>();
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(@"root\WMI", "SELECT * FROM MSAcpi_ThermalZoneTemperature");
-                foreach (ManagementObject obj in searcher.Get())
+
+                var enumerator = searcher.Get().GetEnumerator();
+
+                while( enumerator.MoveNext() )
                 {
-                    Double temp = Convert.ToDouble(obj["CurrentTemperature"].ToString());
-                    temp = (temp - 2732) / 10.0;
-                    result.Add(new TemperatureCheck { CurrentValue = temp, InstanceName = obj["InstanceName"].ToString() });
+                    var current = enumerator.Current;
+
+                    Double temp = Convert.ToDouble( current[ "CurrentTemperature" ].ToString() );
+                    temp = (temp / 10) - 273.15;
+                    result.Add(new TemperatureCheck { CurrentValue = temp, InstanceName = current["InstanceName"].ToString() });
                 }
+
                 return result;
-                // Console.WriteLine(searcher); 
             }
-            //
         }
     }
 }
