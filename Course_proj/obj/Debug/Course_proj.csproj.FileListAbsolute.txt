@@ -1,0 +1,10 @@
+c:\users\anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\bin\Debug\Course_proj.exe.config
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.csprojResolveAssemblyReference.cache
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.AboutBox.resources
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.Form1.resources
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.Properties.Resources.resources
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.csproj.GenerateResource.Cache
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\bin\Debug\Course_proj.exe
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\bin\Debug\Course_proj.pdb
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.exe
+C:\Users\Anastasia\documents\visual studio 2013\Projects\Course_proj\Course_proj\obj\Debug\Course_proj.pdb
